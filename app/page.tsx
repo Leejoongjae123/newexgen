@@ -37,7 +37,7 @@ export default async function Index() {
       <div className="bg-[#eee] w-full h-full py-10">
         <BestReview></BestReview>
       </div>
-      <div className="bg-white w-full h-full ">
+      <div className="bg-white w-full h-full 0">
         <YouTube></YouTube>
       </div>
     </div>

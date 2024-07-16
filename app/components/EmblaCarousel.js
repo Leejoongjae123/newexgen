@@ -11,6 +11,7 @@ import { Chip } from "@nextui-org/react";
 import './css/base.css'
 import './css/sandbox.css'
 import './css/embla.css'
+import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -25,6 +26,9 @@ const EmblaCarousel = (props) => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi)
 
   const onButtonAutoplayClick = useCallback(
     (callback) => {
@@ -102,7 +106,19 @@ const EmblaCarousel = (props) => {
             disabled={nextBtnDisabled}
           />
         </div>
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
       </div>
+
     </div>
   );
 };
