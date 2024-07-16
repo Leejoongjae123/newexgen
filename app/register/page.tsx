@@ -13,12 +13,20 @@ export default function Component() {
   const toggleConfirmVisibility = () => setIsConfirmVisible(!isConfirmVisible);
 
   return (
-    <div className="flex w-full h-screen flex-col items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <div className="flex flex-col items-center pb-2">
         <p className="text-xl font-medium">Welcome</p>
       </div>
       <div className="mt-2 flex w-full max-w-sm flex-col gap-4 rounded-large bg-content1 px-8 py-6 shadow-small">
         <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
+          <Input
+            isRequired
+            label="Username"
+            name="username"
+            placeholder="Enter your username"
+            type="text"
+            variant="bordered"
+          />
           <Input
             isRequired
             label="Email Address"
@@ -48,6 +56,29 @@ export default function Component() {
             name="password"
             placeholder="Enter your password"
             type={isVisible ? "text" : "password"}
+            variant="bordered"
+          />
+          <Input
+            isRequired
+            endContent={
+              <button type="button" onClick={toggleConfirmVisibility}>
+                {isConfirmVisible ? (
+                  <Icon
+                    className="pointer-events-none text-2xl text-default-400"
+                    icon="solar:eye-closed-linear"
+                  />
+                ) : (
+                  <Icon
+                    className="pointer-events-none text-2xl text-default-400"
+                    icon="solar:eye-bold"
+                  />
+                )}
+              </button>
+            }
+            label="Confirm Password"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+            type={isConfirmVisible ? "text" : "password"}
             variant="bordered"
           />
           <Checkbox isRequired className="py-4" size="sm">

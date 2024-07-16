@@ -1,4 +1,6 @@
 import { GeistSans } from "geist/font/sans";
+import Navbar from "./components/Navbar";
+import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 
 const defaultUrl = process.env.VERCEL_URL
@@ -18,10 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
+      <body className="flex justify-center items-center">
+        <NextUIProvider>
+          <Navbar></Navbar>
           {children}
-        </main>
+        </NextUIProvider>
       </body>
     </html>
   );
