@@ -95,7 +95,7 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
+      {/* <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton
             onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
@@ -117,7 +117,7 @@ const EmblaCarousel = (props) => {
             />
           ))}
         </div>
-      </div>
+      </div> */}
 
     </div>
   );
