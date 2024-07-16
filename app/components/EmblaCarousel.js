@@ -69,7 +69,7 @@ const EmblaCarousel = (props) => {
   }, [emblaApi]);
 
   return (
-    <div className="embla">
+    <div className="embla py-10">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((index) => (

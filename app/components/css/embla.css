@@ -9,6 +9,8 @@
 @media (max-width: 768px) {
   .embla {
     max-width: 90%;
+    
+    --slide-size: 80%;
   }
 }
 .embla__viewport {
