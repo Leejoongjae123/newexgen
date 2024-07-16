@@ -1,7 +1,7 @@
 .embla3 {
   max-width: 60%;
   margin: auto;
-  --slide-height: 19rem;
+  --slide-height: auto;
   --slide-spacing: 1rem;
   --slide-size: 70%;
 }
