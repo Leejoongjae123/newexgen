@@ -4,7 +4,9 @@ import { createClient } from "@/utils/supabase/server";
 import Notifications from "./components/Notification";
 import NotificationText from "./components/NotificationText";
 import Header from "@/components/Header";
-import ShareData from './components/ShareData'
+import ShareData from "./components/ShareData";
+import TotalFooter from "./components/TotalFooter";
+import BestReview from "./components/BestReview";
 export default async function Index() {
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.
@@ -22,7 +24,7 @@ export default async function Index() {
   return (
     <div className="flex flex-col items-center justify-center gap-y-10">
       {/* <div className="h-[6vh]"></div> */}
-      <div className="bg-[#eee] w-full h-full py-5">
+      <div className="bg-[#EFC9F0] w-full h-full py-5">
         <Notifications></Notifications>
       </div>
       <div className="h-full w-[90vw] md:w-[60vw]">
@@ -31,6 +33,10 @@ export default async function Index() {
       <div className="w-[90vw] md:w-[60vw] h-full">
         <ShareData></ShareData>
       </div>
+      <div className="w-[90vw] md:w-[60vw] h-full">
+        <BestReview></BestReview>
+      </div>
+      
     </div>
   );
 }

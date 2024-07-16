@@ -78,7 +78,7 @@ export default function Component(props) {
             size="lg"
             color="primary"
             as={Link}
-            className=""
+            className="text-3xl font-bold p-5 "
             href="/#"
           >
             로그인

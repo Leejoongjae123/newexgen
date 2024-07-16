@@ -19,7 +19,7 @@ export default function NotificationText() {
         <h2 className="font-bold text-4xl">📢 이번주 소식</h2>
         </div>
         <div>
-        <Link>
+        <Link className="font-bold text-2xl">
         더보기
         </Link>
         

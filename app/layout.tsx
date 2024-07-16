@@ -2,7 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import Navbar from "./components/Navbar";
 import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
-
+import TotalFooter from "./components/TotalFooter";
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000";
@@ -24,6 +24,7 @@ export default function RootLayout({
         <NextUIProvider>
           <Navbar></Navbar>
           {children}
+          <TotalFooter></TotalFooter>
         </NextUIProvider>
       </body>
     </html>
