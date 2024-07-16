@@ -18,16 +18,7 @@ import { Icon } from "@iconify/react";
 
 import { cn } from "./cn";
 
-const menuItems = [
-  "About",
-  "Blog",
-  "Customers",
-  "Pricing",
-  "Enterprise",
-  "Changelog",
-  "Documentation",
-  "Contact Us",
-];
+const menuItems = ["공지사항", "자랑하기", "리얼리뷰"];
 
 export default function Component(props) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -36,7 +27,7 @@ export default function Component(props) {
     <Navbar
       classNames={{
         base: " flex justify-center items-center",
-        wrapper: "flex justify-center items-center w-[70vw]",
+        wrapper: "flex justify-center items-center w-[70vw] gap-x-20",
         item: "flex hidden md:flex items-center justify-center",
       }}
       height="10vh"
@@ -59,8 +50,10 @@ export default function Component(props) {
           <Button className="text-default-500" radius="full" variant="light">
             <Icon icon="mdi:bell-outline" className="text-4xl " />
           </Button>
-          <Link href='/login'>
-          <Button size='lg' color='primary'>로그인</Button>
+          <Link href="/login">
+            <Button className="text-3xl p-10" size="lg" color="primary">
+              로그인
+            </Button>
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -79,27 +72,33 @@ export default function Component(props) {
           },
         }}
       >
-        <NavbarMenuItem>
-          <Button fullWidth as={Link} href="/#" variant="faded">
-            Sign In
-          </Button>
-        </NavbarMenuItem>
         <NavbarMenuItem className="mb-4">
           <Button
             fullWidth
             size="lg"
+            color="primary"
             as={Link}
-            className="bg-foreground text-background "
+            className=""
             href="/#"
           >
             로그인
           </Button>
         </NavbarMenuItem>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="mb-2 w-full text-default-500" href="#" size="md">
-              {item}
-            </Link>
+          <NavbarMenuItem
+            className="flex flex-col justify-center items-center gap-y-5"
+            key={`${item}-${index}`}
+          >
+            <div className="flex justify-center items-center">
+              <Link
+                className="flex justify-centermb-2 w-full font-bold text-2xl text-center"
+                href="#"
+                size="md"
+              >
+                {item}
+              </Link>
+            </div>
+
             {index < menuItems.length - 1 && <Divider className="opacity-50" />}
           </NavbarMenuItem>
         ))}

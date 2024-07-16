@@ -10,25 +10,25 @@ function ShareData() {
       </div>
 
       <div className="flex gap-x-5 gap-y-5 justify-center items-center flex-wrap">
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #컬픽스마스카라
         </Button>
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #수분크림
         </Button>
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #로션
         </Button>
-        <Button className="p-5" size="lg" color="primary">
+        <Button className="text-2xl p-7" size="lg" color="primary">
           #샴푸
         </Button>
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #컨디셔너
         </Button>
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #컨디셔너
         </Button>
-        <Button className="p-5" size="lg" >
+        <Button className="text-2xl p-7" size="lg" >
           #컨디셔너
         </Button>
       </div>
