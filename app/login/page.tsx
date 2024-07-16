@@ -13,7 +13,7 @@ export default function Component() {
   const toggleConfirmVisibility = () => setIsConfirmVisible(!isConfirmVisible);
 
   return (
-    <div className="flex w-full h-screen flex-col items-center justify-center">
+    <div className="flex w-full h-full flex-col items-center justify-center">
       <div className="flex flex-col items-center pb-2">
         <p className="text-xl font-medium">Welcome</p>
       </div>

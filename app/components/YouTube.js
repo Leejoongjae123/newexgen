@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Link } from "@nextui-org/react";
-import EmblaCarousel2 from "./EmblaCarousel2";
+import EmblaCarousel3 from "./EmblaCarousel3";
 
 const OPTIONS = { containScroll: false };
 const SLIDE_COUNT = 5;
@@ -14,10 +14,10 @@ function BestReview() {
   return (
     <div className="flex flex-col gap-y-5 justify-center items-center">
       <div className="w-[90vw] md:w-[60vw] flex justify-between">
-        <h1 className="text-4xl font-bold">👍 BEST 리얼 리뷰</h1>
+        <h1 className="text-4xl font-bold">👍 체험단시대 유튜브</h1>
         <Link className="font-bold text-2xl">더보기</Link>
       </div>
-      <EmblaCarousel2 slides={SLIDES} options={OPTIONS} />
+      <EmblaCarousel3 slides={SLIDES} options={OPTIONS} />
     </div>
   );
 }

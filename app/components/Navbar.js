@@ -51,7 +51,7 @@ export default function Component(props) {
             <Icon icon="mdi:bell-outline" className="text-4xl " />
           </Button>
           <Link href="/login">
-            <Button className="text-3xl p-10" size="lg" color="primary">
+            <Button className="text-3xl p-5" size="lg" color="primary">
               로그인
             </Button>
           </Link>
@@ -79,7 +79,7 @@ export default function Component(props) {
             color="primary"
             as={Link}
             className="text-3xl font-bold p-5 "
-            href="/#"
+            href="/login"
           >
             로그인
           </Button>

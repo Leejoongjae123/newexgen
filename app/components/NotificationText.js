@@ -48,7 +48,7 @@ export default function NotificationText() {
                 </Chip>
               </TableCell>
 
-              <TableCell className="text-md md:text-2xl font-bold">
+              <TableCell className="text-2xl md:text-2xl font-bold">
                 초등 학습 계획, 어디까지 준비해야 할까요?
               </TableCell>
             </TableRow>
@@ -61,7 +61,7 @@ export default function NotificationText() {
                   톡톡톡
                 </Chip>
               </TableCell>
-              <TableCell className="text-md md:text-2xl font-bold">
+              <TableCell className="text-2xl md:text-2xl font-bold">
                 성적 안 오르는 중2, 학원 끊는 게 맞을까요?
               </TableCell>
             </TableRow>
@@ -74,7 +74,7 @@ export default function NotificationText() {
                   톡톡톡
                 </Chip>
               </TableCell>
-              <TableCell className="text-md md:text-2xl font-bold">
+              <TableCell className="text-2xl md:text-2xl font-bold">
                 고3 학원비 언제까지 내야 할까요?
               </TableCell>
             </TableRow>

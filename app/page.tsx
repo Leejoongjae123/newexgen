@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import ShareData from "./components/ShareData";
 import TotalFooter from "./components/TotalFooter";
 import BestReview from "./components/BestReview";
+import YouTube from "./components/YouTube";
 export default async function Index() {
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.
@@ -33,10 +34,12 @@ export default async function Index() {
       <div className="w-[90vw] md:w-[60vw] h-full">
         <ShareData></ShareData>
       </div>
-      <div className="w-[90vw] md:w-[60vw] h-full">
+      <div className="bg-[#eee] w-full h-full py-10">
         <BestReview></BestReview>
       </div>
-      
+      <div className="bg-white w-full h-full ">
+        <YouTube></YouTube>
+      </div>
     </div>
   );
 }
