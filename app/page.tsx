@@ -8,6 +8,8 @@ import ShareData from "./components/ShareData";
 import TotalFooter from "./components/TotalFooter";
 import BestReview from "./components/BestReview";
 import YouTube from "./components/YouTube";
+
+
 export default async function Index() {
   const canInitSupabaseClient = () => {
     // This function is just for the interactive tutorial.
