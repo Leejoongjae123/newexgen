@@ -23,7 +23,7 @@ function page() {
     <div className="flex flex-col items-center justify-center gap-y-10">
       {/* <div className="h-[6vh]"></div> */}
       <SlideUp>
-        <div className="bg-[#eee] w-full h-full py-5">
+        <div className="bg-[#eee] w-[100vw] h-full py-5">
           <NotiFirst slides={SLIDES} options={OPTIONS} />
         </div>
       </SlideUp>

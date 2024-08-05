@@ -28,7 +28,7 @@ export default async function Index() {
   return (
     <div className="flex flex-col items-center justify-center gap-y-10">
       <SlideUp>
-        <div className="bg-[#EFC9F0] w-full h-full py-5">
+        <div className="bg-[#eee] w-full h-full py-5">
           <Notifications></Notifications>
         </div>
       </SlideUp>

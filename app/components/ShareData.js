@@ -11,7 +11,7 @@ function ShareData() {
     <div className="flex flex-col gap-y-5">
       <div className="flex justify-between">
         <h1 className="text-4xl font-bold">👏 자랑하기</h1>
-        <Link className="font-bold text-2xl">더보기</Link>
+        <Link href='/boast' className="font-bold text-2xl">더보기</Link>
       </div>
 
       <div className="flex gap-x-5 gap-y-5 justify-center items-center flex-wrap">

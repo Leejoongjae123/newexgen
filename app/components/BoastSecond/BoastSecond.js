@@ -5,7 +5,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import "./embla.css";
 import "./base.css";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
-import { Chip } from "@nextui-org/react";
 import {
   Modal,
   ModalContent,
@@ -14,38 +13,64 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  Chip,
+  Avatar,
 } from "@nextui-org/react";
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <section className="embla2 w-[90vw] md:w-[60vw]">
-      <h1 className="text-4xl font-bold my-5">📜 공지사항</h1>
-      <div className="embla__viewport2" ref={emblaRef}>
-        <div className="embla__container2">
+    <section className="embla7 w-[90vw] md:w-[60vw]">
+      <h1 className="text-4xl font-bold my-5">👏 자랑하기</h1>
+      <div className="flex justify-stretch items-center flex-wrap gap-5 my-5">
+        <Button size="lg" color="primary">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+        <Button size="lg" color="default">
+          Primary
+        </Button>
+      </div>
+
+      <div className="embla__viewport7" ref={emblaRef}>
+        <div className="embla__container7">
           {slides.map((index) => (
-            <div className="embla__slide2" key={index}>
-              <div className="embla__slide__number2 relative ">
-                <Chip className="absolute top-4 left-4 z-10">베스트</Chip>
+            <div className="embla__slide7" key={index}>
+              <div className="embla__slide__number7 relative">
+                <Chip className="absolute top-8 left-8 z-50 w-10 h-10">
+                  베스트
+                </Chip>
+
                 <img
                   src={`/images/carousel/carousel${index + 1}.jpg`}
                   alt={`Carousel image ${index + 1}`}
-                  className="w-full h-auto"
+                  className="w-full h-auto z-10 cursor-pointer"
                   onClick={onOpen}
                 />
+                <Avatar isBordered className="absolute bottom-8 left-8 z-50 w-10 h-10" src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
               </div>
-              <h2 className="text-2xl font-bold">Hello</h2>
-              <p className="text-xl font-semibold text-gray-500">
-                Nice to meet you
-              </p>
             </div>
           ))}
         </div>
       </div>
-      <Modal size='4xl' isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal size="4xl" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>

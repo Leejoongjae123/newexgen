@@ -45,7 +45,7 @@ const EmblaCarousel = (props) => {
           ))}
         </div>
       </div>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal size='4xl' isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
             <>
