@@ -13,6 +13,7 @@ import NotiThird from "@/app/components/NotiThird/NotiThird";
 import NotiFourth from "@/app/components/NotiFourth/NotiFourth";
 import NotiFifth from "@/app/components/NotiFifth/NotiFifth";
 import SlideUp from "@/app/components/animation/SlideUp";
+
 function page() {
   const OPTIONS = { align: "start", loop: true };
   const SLIDE_COUNT = 9;
