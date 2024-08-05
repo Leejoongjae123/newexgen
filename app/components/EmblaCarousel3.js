@@ -26,13 +26,13 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className="embla3">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+    <div className="embla3 w-[90vw] md:w-[60vw]">
+      <div className="embla__viewport3" ref={emblaRef}>
+        <div className="embla__container3 ">
           {slides.map((index) => (
-            <div className="embla__slide3 embla__class-names" key={index}>
+            <div className="embla__slide3 embla__class-names3 " key={index}>
               <img
-                className="embla__slide__img"
+                className="embla__slide__img3 rounded-3xl"
                 src={`https://picsum.photos/600/350?v=${index}`}
                 alt="Your alt text"
               />
