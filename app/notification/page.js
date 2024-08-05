@@ -12,6 +12,7 @@ import NotiSecond from "@/app/components/NotiSecond/NotiSecond";
 import NotiThird from "@/app/components/NotiThird/NotiThird";
 import NotiFourth from "@/app/components/NotiFourth/NotiFourth";
 import NotiFifth from "@/app/components/NotiFifth/NotiFifth";
+import SlideUp from "@/app/components/animation/SlideUp";
 function page() {
   const OPTIONS = { align: "start", loop: true };
   const SLIDE_COUNT = 9;
@@ -20,22 +21,31 @@ function page() {
   return (
     <div className="flex flex-col items-center justify-center gap-y-10">
       {/* <div className="h-[6vh]"></div> */}
-      <div className="bg-[#eee] w-full h-full py-5">
-        <NotiFirst slides={SLIDES} options={OPTIONS} />
-      </div>
-      <div className="flex flex-col w-full h-full">
-        <NotiSecond slides={SLIDES} options={OPTIONS}></NotiSecond>
-      </div>
-      <div className="flex flex-col w-full h-full">
-        <NotiThird slides={SLIDES} options={OPTIONS}></NotiThird>
-      </div>
-      <div className="bg-white w-full h-full ">
-      <NotiFourth slides={SLIDES} options={OPTIONS}></NotiFourth>
-      </div>
-      <div className="bg-white h-full w-[90vw] md:w-[60vw]">
-      <NotiFifth></NotiFifth>
-      </div>
-      
+      <SlideUp>
+        <div className="bg-[#eee] w-full h-full py-5">
+          <NotiFirst slides={SLIDES} options={OPTIONS} />
+        </div>
+      </SlideUp>
+      <SlideUp>
+        <div className="flex flex-col w-full h-full">
+          <NotiSecond slides={SLIDES} options={OPTIONS}></NotiSecond>
+        </div>
+      </SlideUp>
+      <SlideUp>
+        <div className="flex flex-col w-full h-full">
+          <NotiThird slides={SLIDES} options={OPTIONS}></NotiThird>
+        </div>
+      </SlideUp>
+      <SlideUp>
+        <div className="bg-white w-full h-full ">
+          <NotiFourth slides={SLIDES} options={OPTIONS}></NotiFourth>
+        </div>
+      </SlideUp>
+      <SlideUp>
+        <div className="bg-white h-full w-[90vw] md:w-[60vw]">
+          <NotiFifth></NotiFifth>
+        </div>
+      </SlideUp>
     </div>
   );
 }
