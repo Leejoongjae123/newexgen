@@ -25,11 +25,11 @@ export default function NotiFifth() {
             <h2 className="font-bold text-4xl">📢 이번주 소식</h2>
           </div>
           <div className="w-1/2 md:w-1/3 flex gap-x-5">
-            <Select label="검색조건" className="max-w-xs">
+            {/* <Select label="검색조건" className="max-w-xs">
               {animals.map((animal) => (
                 <SelectItem key={animal.key}>{animal.label}</SelectItem>
               ))}
-            </Select>
+            </Select> */}
             <Input type="text" label="검색" />
           </div>
         </div>
@@ -122,8 +122,6 @@ export default function NotiFifth() {
             total={10}
             initialPage={1}
             size='lg'
-            
-
           />
         </div>
       </div>
