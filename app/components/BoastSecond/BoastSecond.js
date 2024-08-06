@@ -4,7 +4,13 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import "./embla.css";
 import "./base.css";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Image,
+  CardFooter,
+} from "@nextui-org/react";
 import {
   Modal,
   ModalContent,
@@ -16,6 +22,8 @@ import {
   Chip,
   Avatar,
 } from "@nextui-org/react";
+import { HiOutlineChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
+import { FaRegHeart } from "react-icons/fa";
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -23,9 +31,9 @@ const EmblaCarousel = (props) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <section className="embla7 w-[90vw] md:w-[60vw]">
+    <section className="embla8 w-[90vw] md:w-[60vw]">
       <h1 className="text-4xl font-bold my-5">👏 자랑하기</h1>
-      <div className="flex justify-stretch items-center flex-wrap gap-5 my-5">
+      <div className="flex items-center flex-wrap gap-5 my-5">
         <Button size="lg" color="primary">
           Primary
         </Button>
@@ -49,23 +57,144 @@ const EmblaCarousel = (props) => {
         </Button>
       </div>
 
-      <div className="embla__viewport7" ref={emblaRef}>
+      <div className="embla__viewport8" ref={emblaRef}>
         <div className="embla__container7">
           {slides.map((index) => (
-            <div className="embla__slide7" key={index}>
-              <div className="embla__slide__number7 relative">
-                <Chip className="absolute top-8 left-8 z-50 w-10 h-10">
-                  베스트
-                </Chip>
+            <div className="embla__slide7 gap-y-5 flex flex-col" key={index}>
+              <Card className="py-4 shadow-none flex " >
+                <CardBody className="overflow-visible py-2">
+                  <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl w-full"
+                    src="https://nextui.org/images/hero-card-complete.jpeg"
+                    onClick={onOpen}
+                  />
+                </CardBody>
+                <CardFooter className="pb-0 px-4 flex-col items-start">
+                  <div className="flex justify-between w-full items-center">
+                    <div>
+                      <Chip color="secondary">
+                        <p className="text-xl">#택배인증</p>
+                      </Chip>
+                    </div>
+                    <div className="text-xl text-gray-500">2시간 전</div>
+                  </div>
+                  <div className="my-1">
+                    <p className="text-2xl font-bold">
+                      이번주 택배 인증합니다.
+                    </p>
+                  </div>
 
-                <img
-                  src={`/images/carousel/carousel${index + 1}.jpg`}
-                  alt={`Carousel image ${index + 1}`}
-                  className="w-full h-auto z-10 cursor-pointer"
-                  onClick={onOpen}
-                />
-                <Avatar isBordered className="absolute bottom-8 left-8 z-50 w-10 h-10" src="https://i.pravatar.cc/150?u=a042581f4e29026024d" />
-              </div>
+                  <div className="flex justify-between items-center w-full mt-5">
+                    <div className="flex items-center gap-x-2">
+                      <Avatar
+                        isBordered
+                        className=""
+                        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                      />
+                      <p className="text-xl font-semibold">이중재 님</p>
+                    </div>
+
+                    <div className="flex items-center gap-x-2">
+                      <FaRegHeart className="text-gray-500" />
+                      <div className="text-xl">12</div>
+                      <HiOutlineChatBubbleOvalLeftEllipsis className="text-gray-500" />
+                      <div className="text-xl">3</div>
+
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+              <Card className="py-4 shadow-none flex " >
+                <CardBody className="overflow-visible py-2">
+                  <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl w-full"
+                    src="https://nextui.org/images/hero-card-complete.jpeg"
+                    onClick={onOpen}
+                  />
+                </CardBody>
+                <CardFooter className="pb-0 px-4 flex-col items-start">
+                  <div className="flex justify-between w-full items-center">
+                    <div>
+                      <Chip color="secondary">
+                        <p className="text-xl">#택배인증</p>
+                      </Chip>
+                    </div>
+                    <div className="text-xl text-gray-500">2시간 전</div>
+                  </div>
+                  <div className="my-1">
+                    <p className="text-2xl font-bold">
+                      이번주 택배 인증합니다.
+                    </p>
+                  </div>
+
+                  <div className="flex justify-between items-center w-full mt-5">
+                    <div className="flex items-center gap-x-2">
+                      <Avatar
+                        isBordered
+                        className=""
+                        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                      />
+                      <p className="text-xl font-semibold">이중재 님</p>
+                    </div>
+
+                    <div className="flex items-center gap-x-2">
+                      <FaRegHeart className="text-gray-500" />
+                      <div className="text-xl">12</div>
+                      <HiOutlineChatBubbleOvalLeftEllipsis className="text-gray-500" />
+                      <div className="text-xl">3</div>
+
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+              <Card className="py-4 shadow-none flex " >
+                <CardBody className="overflow-visible py-2">
+                  <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl w-full"
+                    src="https://nextui.org/images/hero-card-complete.jpeg"
+                    onClick={onOpen}
+                  />
+                </CardBody>
+                <CardFooter className="pb-0 px-4 flex-col items-start">
+                  <div className="flex justify-between w-full items-center">
+                    <div>
+                      <Chip color="secondary">
+                        <p className="text-xl">#택배인증</p>
+                      </Chip>
+                    </div>
+                    <div className="text-xl text-gray-500">2시간 전</div>
+                  </div>
+                  <div className="my-1">
+                    <p className="text-2xl font-bold">
+                      이번주 택배 인증합니다.
+                    </p>
+                  </div>
+
+                  <div className="flex justify-between items-center w-full mt-5">
+                    <div className="flex items-center gap-x-2">
+                      <Avatar
+                        isBordered
+                        className=""
+                        src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
+                      />
+                      <p className="text-xl font-semibold">이중재 님</p>
+                    </div>
+
+                    <div className="flex items-center gap-x-2">
+                      <FaRegHeart className="text-gray-500" />
+                      <div className="text-xl">12</div>
+                      <HiOutlineChatBubbleOvalLeftEllipsis className="text-gray-500" />
+                      <div className="text-xl">3</div>
+
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+              
+              
             </div>
           ))}
         </div>
